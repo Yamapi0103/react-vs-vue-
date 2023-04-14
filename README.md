@@ -1,8 +1,8 @@
 # react vs vue 用法上的差別
 
-# Pass props
+## Pass props
 
-## 驗證props
+### 驗證props
 
 react: prop-types、typescript
 
@@ -72,7 +72,7 @@ export default {
 - required 和 default 不會同時存在（雖然不會噴錯）
 - default 是當外面根本沒傳這個props（undefined）時會走的路，所以外面假如設一個props為null 是不會走default的囉～
 
-## 傳入一個物件
+### 傳入一個物件
 
 ```jsx
 // in react
@@ -144,7 +144,7 @@ export default {
 </script>
 ```
 
-## 展開怎麼傳？
+### 展開怎麼傳？
 
 ```jsx
 // in react 
@@ -248,7 +248,7 @@ props:{name,age}
 
 ```
 
-# 數據綁定：Vue採用雙向數據綁定，React採用單向數據流。
+## 數據綁定：Vue採用雙向數據綁定，React採用單向數據流。
 
 react 須自行傳入onChange callback
 
@@ -365,9 +365,9 @@ export default {
 </script>
 ```
 
-# 插槽
+## 插槽
 
-## 傳遞標籤之間的內容
+### 傳遞標籤之間的內容
 
 react: props.children
 
@@ -390,7 +390,7 @@ vue: slot
 </template>
 ```
 
-## 指定插入位置
+### 指定插入位置
 
 ```haskell
 // in react
@@ -522,13 +522,13 @@ export default MyComponent
 - vue 其實是用$slots接到外部傳進來的內容(類似react children)，但他提供外部對slot命名以插入對應的位置。
 - In React, you can specify the placement of "props children" by wrapping them in custom HTML elements or components within the parent component's JSX.(像左例). So we can create slots based on the type
 
-## 插槽內容子傳父
+### 插槽內容子傳父
 
 相關應用範例： 進去調成手機版後可發現每塊swiper可封裝組件，滑動UI塊可給外層實作
 
 [王者荣耀官网-腾讯游戏](https://pvp.qq.com/m/)
 
-參考教學：
+## 參考教學：
 
 [](https://www.bilibili.com/video/BV1S4411W79F?p=11&vd_source=b7b95c88e0694fa186b56e535ce87b9d)
 
@@ -683,9 +683,9 @@ SwiperContainer 只需要管swiper部分就好，畫面呈現交給外部去實�
 </SwiperContainer>
 ```
 
-# CSS-in-JS
+## CSS-in-JS
 
-## 常用的工具比較
+### 常用的工具比較
 
 工具react 通常使用 styled-component
 
@@ -728,7 +728,7 @@ vue 本身有提供 scoped
 </style>
 ```
 
-## 父層影響組件內部樣式
+### 父層影響組件內部樣式
 
 styled-components 可覆寫組件內部樣式
 
@@ -783,7 +783,7 @@ vue可用::v-deep 影響到組件內部樣式
 </style>
 ```
 
-# **訪問組件或DOM元素**
+## **訪問組件或DOM元素**
 
  react 
 
@@ -842,11 +842,7 @@ export default {
 </script>
 ```
 
-# 測驗
-
-[https://presenter.ahaslides.com/apps/presentations](https://presenter.ahaslides.com/apps/presentations)
-
-# 參考資料
+## 參考資料
 
 - v-bind 直接將物件展開傳入
 
@@ -855,15 +851,3 @@ export default {
 - render props vs scoped-slot
 
 [Modern component reusability: Render props in React & scoped slots in Vue - LogRocket Blog](https://blog.logrocket.com/modern-component-reusability-render-props-in-react-scoped-slots-in-vue-ff3c5b2dc899/)
-
-# 錄影
-
-[](https://drive.google.com/file/d/1dDgh1QD11TGOqcb5HiyrXVZGmATAcUu-/view)
-
-[https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef?pvs=4](https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef)
-
-[https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef?pvs=4](https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef)
-
-[https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef?pvs=4](https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef)
-
-[https://glimmer-point-bfc.notion.site/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef](https://www.notion.so/react-vs-vue-4c09a5938b6547a7b391fbe94d9699ef)
